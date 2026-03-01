@@ -14,41 +14,35 @@
   <!-- ╚══════════════════════════════════════════════╝ -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-    /*
-    ════════════════════════════════════════
-    EMAILJS QUICK-START (one-time, ~5 min)
-    ════════════════════════════════════════
-    1. Sign up at  https://www.emailjs.com  (free tier: 200 emails/month)
-    2. Dashboard → "Email Services" → Add Service
-       • Choose Gmail / Outlook / any SMTP
-       • Connect your inbox (brightchester5@gmail.com)
-       • Copy the  Service ID  (e.g. "service_abc123")
-    3. Dashboard → "Email Templates" → Create Template
-       • Paste this template body (or customise):
-         ─────────────────────────────────────────
-         Subject : New enquiry — {{inquiry}}
-         Body    :
-           Name    : {{first_name}} {{last_name}}
-           Email   : {{email}}
-           Type    : {{inquiry}}
-           Message : {{message}}
-         ─────────────────────────────────────────
-       • The variable names {{...}} MUST match the
-         form field  name=""  attributes exactly.
-       • Save — copy the  Template ID  (e.g. "template_xyz789")
-    4. Dashboard → Account → copy your  Public Key
-    5. Replace the three placeholder strings below:
-         EMAILJS_PUBLIC_KEY   ← your Public Key
-         EMAILJS_SERVICE_ID   ← your Service ID
-         EMAILJS_TEMPLATE_ID  ← your Template ID
-    6. Commit & push to GitHub — done. ✓
-    ════════════════════════════════════════
-    */
-    const EMAILJS_PUBLIC_KEY   = 'YOUR_PUBLIC_KEY';    // ← replace
-    const EMAILJS_SERVICE_ID   = 'YOUR_SERVICE_ID';    // ← replace
-    const EMAILJS_TEMPLATE_ID  = 'YOUR_TEMPLATE_ID';   // ← replace
 
-    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  // EmailJS config
+const EMAILJS_PUBLIC_KEY  = 'VuoUmUw8ZlXXzSfdS';   // ← your public key
+const EMAILJS_SERVICE_ID  = 'service_52vq9ts';
+const EMAILJS_TEMPLATE_ID = 'template_oy7jgp6';
+
+// Initialize EmailJS
+emailjs.init({
+  publicKey: EMAILJS_PUBLIC_KEY
+});
+
+// Form submit
+document.querySelector("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  emailjs.sendForm(
+    EMAILJS_SERVICE_ID,
+    EMAILJS_TEMPLATE_ID,
+    this
+  )
+  .then(() => {
+    alert("Message sent!");
+    this.reset(); // optional: clears form after sending
+  })
+  .catch(err => {
+    console.error(err);
+    alert("Failed to send");
+  });
+});
   </script>
 
   <style>
