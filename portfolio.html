@@ -9,40 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- ╔══════════════════════════════════════════════╗ -->
-  <!-- ║  EMAILJS SDK — do NOT move below the form   ║ -->
-  <!-- ╚══════════════════════════════════════════════╝ -->
+  <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script>
-
-  // EmailJS config
-const EMAILJS_PUBLIC_KEY  = 'VuoUmUw8ZlXXzSfdS';   // ← your public key
-const EMAILJS_SERVICE_ID  = 'service_52vq9ts';
-const EMAILJS_TEMPLATE_ID = 'template_oy7jgp6';
-
-// Initialize EmailJS
-emailjs.init({
-  publicKey: EMAILJS_PUBLIC_KEY
-});
-
-// Form submit
-document.querySelector("form").addEventListener("submit", function (e) {
-  e.preventDefault();
-
-  emailjs.sendForm(
-    EMAILJS_SERVICE_ID,
-    EMAILJS_TEMPLATE_ID,
-    this
-  )
-  .then(() => {
-    alert("Message sent!");
-    this.reset(); // optional: clears form after sending
-  })
-  .catch(err => {
-    console.error(err);
-    alert("Failed to send");
-  });
-});
+    const EMAILJS_PUBLIC_KEY  = 'VuoUmUw8ZlXXzSfdS';
+    const EMAILJS_SERVICE_ID  = 'service_52vq9ts';
+    const EMAILJS_TEMPLATE_ID = 'template_oy7jgp6';
+    emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
   </script>
 
   <style>
@@ -120,7 +93,10 @@ document.querySelector("form").addEventListener("submit", function (e) {
       font-family: var(--mono); font-size: 0.68rem;
       color: var(--dim);
       letter-spacing: 0.2em; text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.3s;
     }
+    .nav-logo:hover { color: var(--text); }
     .nav-links { display: flex; gap: 32px; list-style: none; }
     .nav-links a {
       font-family: var(--mono); font-size: 0.66rem;
@@ -371,7 +347,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
     /* ─── CONTACT SECTION ─── */
     .contact-section {
-      padding: 100px 48px 0; max-width: 1080px; margin: 0 auto;
+      padding: 60px 48px 0; max-width: 1080px; margin: 0 auto;
       opacity: 0; transform: translateY(18px);
       transition: opacity 0.9s cubic-bezier(0.16,1,0.3,1), transform 0.9s cubic-bezier(0.16,1,0.3,1);
     }
@@ -491,8 +467,8 @@ document.querySelector("form").addEventListener("submit", function (e) {
       .exp-item { grid-template-columns: 1fr; gap: 8px; }
       .exp-meta { padding-right: 0; }
       .fish-track { display: none; }
-      .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-      .contact-section { padding: 80px 48px 0; }
+      .contact-inner { grid-template-columns: 1fr; gap: 40px; }
+      .contact-section { padding: 48px 48px 0; }
     }
     @media (max-width: 600px) {
       header { padding: 0 22px; }
@@ -504,7 +480,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
       .name-last { font-size: clamp(2.8rem, 12vw, 3.8rem); }
       .hero-right { height: 90vw; max-height: 420px; min-height: 280px; }
       .hero-actions { gap: 14px; }
-      .contact-section { padding: 60px 22px 0; }
+      .contact-section { padding: 40px 22px 0; }
       .form-name-row { grid-template-columns: 1fr; }
     }
   </style>
@@ -527,7 +503,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
   </div>
 
   <header>
-    <div class="nav-logo">NB — Portfolio</div>
+    <a href="#home" class="nav-logo">NB — Portfolio</a>
     <nav>
       <ul class="nav-links">
         <li><a href="#projects"   data-num="01">Work</a></li>
@@ -544,10 +520,11 @@ document.querySelector("form").addEventListener("submit", function (e) {
       </div>
       <div class="nav-dropdown" id="navDropdown" role="menu">
         <div class="nav-dropdown-header">What do you need?</div>
-        <button class="nav-dropdown-item" data-inquiry="Need a website"  role="menuitem">Need a website</button>
-        <button class="nav-dropdown-item" data-inquiry="Need a system"   role="menuitem">Need a system</button>
-        <button class="nav-dropdown-item" data-inquiry="Have an idea"    role="menuitem">Have an idea</button>
-        <button class="nav-dropdown-item" data-inquiry="Branding"        role="menuitem">Branding</button>
+        <button class="nav-dropdown-item" data-inquiry="Need a website"    role="menuitem">Need a website</button>
+        <button class="nav-dropdown-item" data-inquiry="Need a system"     role="menuitem">Need a system</button>
+        <button class="nav-dropdown-item" data-inquiry="Have an idea"      role="menuitem">Have an idea</button>
+        <button class="nav-dropdown-item" data-inquiry="Branding"          role="menuitem">Branding</button>
+        <button class="nav-dropdown-item" data-inquiry="Full-time position" role="menuitem">Full-time position</button>
         <div class="nav-dropdown-footer">↓ Scroll to contact form</div>
       </div>
     </div>
@@ -603,20 +580,20 @@ document.querySelector("form").addEventListener("submit", function (e) {
         <div class="sec-count">3 projects</div>
       </div>
       <div class="proj-grid">
-        <a href="https://yourdreamsacademy.vercel.app/" class="proj-card">
+        <a href="https://yourdreamsacademy.vercel.app/" class="proj-card" target="_blank" rel="noopener">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">001</div>
           <div class="proj-img">
             <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LMS">
           </div>
           <div class="proj-name">Learning Management<br>System</div>
-          <p class="proj-desc lit-text">Full-featured LMS — student registration, user management, course management, exercises, results tracking, enrollment management,.</p>
+          <p class="proj-desc lit-text">Full-featured LMS — student registration, user management, course management, exercises, results tracking, enrollment management.</p>
           <div class="proj-stack">
             <span class="pill">Vue.js</span><span class="pill">Django REST</span>
-            <span class="pill">PostgreSQL</span><span class="pill">Bootstrap</span>
+            <span class="pill">PostgreSQL</span><span class="pill">Bootstrap</span><span class="pill">jQuery</span>
           </div>
         </a>
-        <a href="https://sedglo-hair-beauty.vercel.app/" class="proj-card">
+        <a href="https://sedglo-hair-beauty.vercel.app/" class="proj-card" target="_blank" rel="noopener">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">002</div>
           <div class="proj-img">
@@ -626,10 +603,10 @@ document.querySelector("form").addEventListener("submit", function (e) {
           <p class="proj-desc lit-text">Conversion-focused landing page — clarity, responsiveness, fast load on mobile.</p>
           <div class="proj-stack">
             <span class="pill">HTML</span><span class="pill">CSS</span>
-            <span class="pill">Bootstrap</span><span class="pill">UX</span>
+            <span class="pill">Bootstrap</span><span class="pill">jQuery</span><span class="pill">UX</span>
           </div>
         </a>
-        <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="proj-card" style="grid-column:1/-1;flex-direction:row;align-items:center;gap:32px;min-height:140px;">
+        <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="proj-card" target="_blank" rel="noopener" style="grid-column:1/-1;flex-direction:row;align-items:center;gap:32px;min-height:140px;">
           <div style="flex:0 0 auto;">
             <div class="proj-num">003</div>
             <div class="proj-name" style="font-size:1.4rem;">Local Chips &amp;<br>Kota Store</div>
@@ -639,7 +616,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
             <p class="proj-desc lit-text" style="margin:0;">WhatsApp ordering integration — built for small businesses needing effective presence without complexity.</p>
             <div class="proj-stack">
               <span class="pill">HTML</span><span class="pill">CSS</span>
-              <span class="pill">JavaScript</span><span class="pill">WhatsApp API</span>
+              <span class="pill">JavaScript</span><span class="pill">jQuery</span><span class="pill">WhatsApp API</span>
             </div>
           </div>
         </a>
@@ -697,6 +674,19 @@ document.querySelector("form").addEventListener("submit", function (e) {
         </div>
       </div>
       <div class="exp-list">
+
+        <!-- Current / ongoing -->
+        <div class="exp-item">
+          <div class="exp-meta">
+            <div class="exp-period">Feb 2025 –<br>Present</div>
+            <div class="exp-co">Independent</div>
+          </div>
+          <div>
+            <div class="exp-role">Full-Stack & Deployment</div>
+            <p class="exp-desc lit-text">Deepening frontend–backend communication, REST API integration, and production deployments. Refining UI/UX craft across personal and client projects.</p>
+          </div>
+        </div>
+
         <div class="exp-item">
           <div class="exp-meta">
             <div class="exp-period">Apr 2024 –<br>Feb 2025</div>
@@ -707,6 +697,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
             <p class="exp-desc lit-text">Built and maintained frontend features for a production system. Collaborated with backend APIs — focused on responsiveness, usability, and maintainable UI architecture that scales.</p>
           </div>
         </div>
+
         <div class="exp-item">
           <div class="exp-meta">
             <div class="exp-period">Oct 2023 –<br>Apr 2024</div>
@@ -717,6 +708,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
             <p class="exp-desc lit-text">Developed business-facing web solutions — layouts, interactions, content management for client websites. Delivered work that met real business objectives on time.</p>
           </div>
         </div>
+
       </div>
     </section>
 
@@ -747,17 +739,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
       </div>
 
       <div class="contact-right">
-        <!--
-          ══════════════════════════════════════════
-          EMAILJS TEMPLATE VARIABLE MAP
-          These  name=""  values are what EmailJS
-          reads. Your template must use these exact
-          variable names wrapped in {{ }}:
-            {{first_name}}  {{last_name}}
-            {{email}}       {{inquiry}}
-            {{message}}
-          ══════════════════════════════════════════
-        -->
         <form class="contact-form" id="contactForm" novalidate>
 
           <!-- Inquiry type badge (pre-filled from nav dropdown) -->
@@ -775,6 +756,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
                 <option value="Need a system">Need a system</option>
                 <option value="Have an idea">Have an idea</option>
                 <option value="Branding">Branding</option>
+                <option value="Full-time position">Full-time position</option>
               </select>
               <span class="select-arrow">▾</span>
             </div>
@@ -833,11 +815,19 @@ document.querySelector("form").addEventListener("submit", function (e) {
     </div>
     <div class="foot-right">
       <a href="mailto:brightchester5@gmail.com" class="soc" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://github.com/" class="soc" title="GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/" class="soc" title="LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://x.com/" class="soc" title="X (Twitter)" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/>
+      <a href="https://yourdreamsacademy.vercel.app/" class="soc" title="LMS Project" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+        </svg>
+      </a>
+      <a href="https://sedglo-hair-beauty.vercel.app/" class="soc" title="Salon Project" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </a>
+      <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="soc" title="Kota Store Project" target="_blank" rel="noopener">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
         </svg>
       </a>
     </div>
@@ -857,7 +847,7 @@ document.querySelector("form").addEventListener("submit", function (e) {
     curH.style.left = x + 'px'; curH.style.top = y + 'px';
     curV.style.left = x + 'px'; curV.style.top = y + 'px';
   });
-  document.querySelectorAll('a, button, .proj-card, .sk, .soc, .nav-dropdown-item, .form-select, .form-input, .form-textarea, .btn-send').forEach(el => {
+  document.querySelectorAll('a, button, .proj-card, .sk, .soc, .nav-dropdown-item, .form-select, .form-input, .form-textarea, .btn-send, .nav-logo').forEach(el => {
     el.addEventListener('mouseenter', () => document.body.classList.add('hovering'));
     el.addEventListener('mouseleave', () => document.body.classList.remove('hovering'));
   });
@@ -937,7 +927,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
 
   /* ══════════════════════════════════════
      FORM SUBMISSION — EMAILJS
-     Works on GitHub Pages (no server needed)
   ══════════════════════════════════════ */
   const contactForm = document.getElementById('contactForm');
   const submitBtn   = document.getElementById('submitBtn');
@@ -946,7 +935,6 @@ document.querySelector("form").addEventListener("submit", function (e) {
   contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    /* ── Client-side validation ── */
     const required = {
       inquiry   : 'Please select an enquiry type.',
       first_name: 'Please enter your first name.',
@@ -964,29 +952,20 @@ document.querySelector("form").addEventListener("submit", function (e) {
       return;
     }
 
-    /* ── Loading state ── */
     submitBtn.disabled = true;
     submitBtn.innerHTML = 'Sending… <span class="btn-send-icon" style="display:inline-block;animation:spin 1s linear infinite">◌</span>';
 
     try {
-      /*
-        emailjs.sendForm(serviceID, templateID, formElement)
-        — reads all  name=""  attributes from the form
-          and maps them to your EmailJS template variables
-      */
       await emailjs.sendForm(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
-        contactForm   // passes the whole form — no manual object needed
+        contactForm
       );
-
       showStatus('success', '✓ Message sent — I\'ll be in touch within 24 hours.');
       contactForm.reset();
       inquiryBadge.classList.remove('show');
       charCount.textContent = '0 / 1000';
-
     } catch (err) {
-      /* err.text contains the EmailJS error description */
       const detail = err && err.text ? err.text : 'Please try again or email me directly.';
       showStatus('error', 'Send failed — ' + detail);
       console.error('EmailJS error:', err);
