@@ -841,6 +841,8 @@
   /* ══════════════════════════════════════
      CROSSHAIR CURSOR
   ══════════════════════════════════════ */
+  import { Analytics } from "@vercel/analytics/next"
+
   const dot  = document.getElementById('curDot');
   const curH = document.getElementById('curH');
   const curV = document.getElementById('curV');
@@ -1089,5 +1091,7 @@
     });
   });
   </script>
+
+  <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
