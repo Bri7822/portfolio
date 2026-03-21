@@ -241,14 +241,13 @@
     }
     .photo-scene { perspective: 900px; width: 100%; height: 100%; }
 
-    /* photo-shell now wraps BOTH the frame and the meta text */
     .photo-shell {
       transform-style: preserve-3d;
       transform: rotateX(1.5deg) rotateY(-2.5deg);
       transition: transform 0.9s cubic-bezier(0.23,1,0.32,1);
       will-change: transform;
       width: 100%; height: 100%;
-      position: relative; /* so photo-meta can position relative to it */
+      position: relative;
     }
     .photo-frame { position: relative; border-radius: 3px; overflow: hidden; width: 100%; height: 100%; background: #080808; }
     .photo-frame::after {
@@ -262,14 +261,12 @@
     }
     .photo-shell:hover .photo-frame img { filter: grayscale(0%) contrast(1.06) brightness(0.96); }
 
-    /* photo-meta is now INSIDE photo-shell so it tilts with the image */
     .photo-meta {
       position: absolute;
       bottom: 16px; right: 0;
       text-align: right;
       z-index: 10;
       pointer-events: none;
-      /* lift it slightly in 3D so it feels layered above the image */
       transform: translateZ(8px);
     }
     .photo-meta-year { font-family: var(--cormorant); font-size: 2.6rem; font-weight: 300; font-style: italic; color: rgba(255,255,255,0.13); line-height: 1; letter-spacing: -0.04em; }
@@ -575,14 +572,12 @@
       </div>
       <div class="hero-right">
         <div class="photo-scene">
-          <!-- photo-shell now wraps BOTH the image frame AND the meta text -->
           <div class="photo-shell" id="photoShell">
             <div class="photo-frame">
               <img src="./WhatsApp Image 2025-09-12 at 23.51.36.jpeg"
                    alt="Nkosi Bright"
                    onerror="this.parentElement.style.background='#0a0a0a'">
             </div>
-            <!-- Moved inside photo-shell so it tilts together with the image -->
             <div class="photo-meta">
               <div class="photo-meta-year">2026</div>
               <div class="photo-meta-loc">Gauteng, ZA</div>
@@ -604,9 +599,11 @@
           <div class="sec-label">01 — Work</div>
           <h2 class="sec-title">Projects</h2>
         </div>
-        <div class="sec-count">3 projects</div>
+        <div class="sec-count">4 projects</div>
       </div>
       <div class="proj-grid">
+
+        <!-- 001 — LMS -->
         <a href="https://yourdreamsacademy.vercel.app/" class="proj-card" target="_blank" rel="noopener">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">001</div>
@@ -622,6 +619,8 @@
             <span class="pill">PostgreSQL</span><span class="pill">Bootstrap</span><span class="pill">jQuery</span>
           </div>
         </a>
+
+        <!-- 002 — Salon -->
         <a href="https://sedglo-hair-beauty.vercel.app/" class="proj-card" target="_blank" rel="noopener">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">002</div>
@@ -635,23 +634,40 @@
             <span class="pill">Bootstrap</span><span class="pill">jQuery</span><span class="pill">UX</span>
           </div>
         </a>
-        <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="proj-card" target="_blank" rel="noopener" style="grid-column:1/-1;flex-direction:row;align-items:center;gap:32px;min-height:140px;">
-          <div style="flex:0 0 auto;">
-            <div class="proj-num">003</div>
-            <div class="proj-name" style="font-size:1.4rem;">Local Chips &amp;<br>Kota Store</div>
+
+        <!-- 003 — Local Chips & Kota Store -->
+        <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="proj-card" target="_blank" rel="noopener">
+          <span class="proj-arrow">↗</span>
+          <div class="proj-num">003</div>
+          <div class="proj-img">
+            <img src="./assets/mimi.png" alt="Local Chips & Kota Store">
           </div>
-          <div style="width:1px;background:var(--border);align-self:stretch;"></div>
-          <div style="flex:1;display:flex;flex-direction:column;gap:10px;">
-            <p class="proj-desc lit-text" style="margin:0;">Simple online menu where customers order food directly
-              through WhatsApp — perfect for small restaurants and
-              kota shops.
-            </p>
-            <div class="proj-stack">
-              <span class="pill">HTML</span><span class="pill">CSS</span>
-              <span class="pill">JavaScript</span><span class="pill">jQuery</span><span class="pill">WhatsApp API</span>
-            </div>
+          <div class="proj-name">Local Chips &amp;<br>Kota Store</div>
+          <p class="proj-desc lit-text">Simple online menu where customers order food directly
+            through WhatsApp — perfect for small restaurants and
+            kota shops.
+          </p>
+          <div class="proj-stack">
+            <span class="pill">HTML</span><span class="pill">CSS</span>
+            <span class="pill">JavaScript</span><span class="pill">jQuery</span><span class="pill">WhatsApp API</span>
           </div>
         </a>
+
+        <!-- 004 — La Voga -->
+        <a href="#" class="proj-card" target="_blank" rel="noopener">
+          <span class="proj-arrow">↗</span>
+          <div class="proj-num">004</div>
+          <div class="proj-img">
+            <img src="./assets/la voga.png" alt="La Voga">
+          </div>
+          <div class="proj-name">La Voga<br>Brand Website</div>
+          <p class="proj-desc lit-text">Elegant brand presence website built to showcase style, attract customers, and establish a strong digital identity for a fashion-forward label.</p>
+          <div class="proj-stack">
+            <span class="pill">HTML</span><span class="pill">CSS</span>
+            <span class="pill">JavaScript</span><span class="pill">UX</span>
+          </div>
+        </a>
+
       </div>
     </section>
 
