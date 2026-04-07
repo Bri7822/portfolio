@@ -2,6 +2,65 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+
+  <!-- ─── PRIMARY SEO ─── -->
+  <title>Nkosi Bright — Software Engineer | Vue.js · Django · Python · South Africa</title>
+  <meta name="description" content="Nkosi Bright is a South African software engineer building websites, ordering systems, and learning platforms. Fast, responsive, and conversion-focused. Available for freelance and full-time work." />
+  <meta name="keywords" content="software engineer South Africa, web developer Gauteng, Vue.js developer, Django developer, Python developer, freelance web developer, full stack developer, LMS developer, portfolio" />
+  <meta name="author" content="Nkosi Bright" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://nkosibright.vercel.app/" />
+
+  <!-- ─── OPEN GRAPH (Facebook, LinkedIn, WhatsApp, Slack previews) ─── -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://nkosibright.vercel.app/" />
+  <meta property="og:title"       content="Nkosi Bright — Software Engineer" />
+  <meta property="og:description" content="I build websites, ordering systems, and learning platforms — fast, responsive, and designed to convert visitors into real clients." />
+  <meta property="og:image"       content="https://nkosibright.vercel.app/assets/og-image.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en_ZA" />
+  <meta property="og:site_name"   content="Nkosi Bright Portfolio" />
+
+  <!-- ─── TWITTER / X CARD ─── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Nkosi Bright — Software Engineer" />
+  <meta name="twitter:description" content="I build websites, ordering systems, and learning platforms — fast, responsive, and designed to convert." />
+  <meta name="twitter:image"       content="https://nkosibright.vercel.app/assets/og-image.png" />
+
+  <!-- ─── GEO / LOCAL SEO ─── -->
+  <meta name="geo.region"   content="ZA-GT" />
+  <meta name="geo.placename" content="Gauteng, South Africa" />
+
+  <!-- ─── JSON-LD STRUCTURED DATA ─── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Nkosi Bright",
+    "jobTitle": "Software Engineer",
+    "url": "https://nkosibright.vercel.app/",
+    "email": "brightchester5@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "Gauteng",
+      "addressCountry": "ZA"
+    },
+    "knowsAbout": ["Vue.js", "Python", "Django", "PostgreSQL", "JavaScript", "HTML", "CSS", "REST APIs", "UI/UX Design"],
+    "sameAs": [
+      "https://www.fiverr.com/nkosi_bright"
+    ],
+    "description": "South African software engineer building websites, ordering systems, and learning platforms.",
+    "offers": {
+      "@type": "Offer",
+      "description": "Freelance web development and software engineering services",
+      "areaServed": "Worldwide",
+      "availableLanguage": "English"
+    }
+  }
+  </script>
+
+  <!-- ─── EXISTING TAGS (unchanged) ─── -->
   <title>Nkosi Bright — Software Engineer</title>
   <link rel="icon" href="/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo_2_final.png">
@@ -523,7 +582,7 @@
 
   <header>
     <a href="#home" class="nav-logo">NB — Portfolio</a>
-    <nav>
+    <nav aria-label="Main navigation">
       <ul class="nav-links">
         <li><a href="#projects"   data-num="01">Work</a></li>
         <li><a href="#skills"     data-num="02">Skills</a></li>
@@ -551,7 +610,7 @@
 
   <div class="wrap">
 
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-label="Introduction">
       <div class="hero-left">
         <div class="name-block">
           <span class="name-first">Nkosi</span>
@@ -563,7 +622,7 @@
           I build websites, ordering systems, and learning platforms — fast, responsive, and designed to retain users, convert them to real clients, and build trust.
         </p>
         <div class="hero-actions">
-          <a href="https://www.fiverr.com/nkosi_bright" class="btn-primary" target="_blank">
+          <a href="https://www.fiverr.com/nkosi_bright" class="btn-primary" target="_blank" rel="noopener noreferrer">
           Hire Me on Fiverr ↗
           </a>
           <a href="#projects" class="btn-primary">View work &nbsp;↓</a>
@@ -575,7 +634,7 @@
           <div class="photo-shell" id="photoShell">
             <div class="photo-frame">
               <img src="./WhatsApp Image 2025-09-12 at 23.51.36.jpeg"
-                   alt="Nkosi Bright"
+                   alt="Nkosi Bright — Software Engineer based in Gauteng, South Africa"
                    onerror="this.parentElement.style.background='#0a0a0a'">
             </div>
             <div class="photo-meta">
@@ -593,7 +652,7 @@
       <div class="divider-line"></div>
     </div>
 
-    <section class="section" id="projects">
+    <section class="section" id="projects" aria-label="Projects">
       <div class="sec-head">
         <div>
           <div class="sec-label">01 — Work</div>
@@ -604,13 +663,13 @@
       <div class="proj-grid">
 
         <!-- 001 — LMS -->
-        <a href="https://yourdreamsacademy.vercel.app/" class="proj-card" target="_blank" rel="noopener">
+        <a href="https://yourdreamsacademy.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Learning Management System project">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">001</div>
           <div class="proj-img">
-            <img src="./assets/LMS_1.png" alt="LMS">
+            <img src="./assets/LMS_1.png" alt="Learning Management System built with Vue.js and Django REST">
           </div>
-          <div class="proj-name">Learning Management<br>System</div>
+          <h3 class="proj-name">Learning Management<br>System</h3>
           <p class="proj-desc lit-text">Online learning platform where schools can manage students,
             courses and lessons in one place.
           </p>
@@ -621,13 +680,13 @@
         </a>
 
         <!-- 002 — Salon -->
-        <a href="https://sedglo-hair-beauty.vercel.app/" class="proj-card" target="_blank" rel="noopener">
+        <a href="https://sedglo-hair-beauty.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Salon One-Page Website project">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">002</div>
           <div class="proj-img">
-            <img src="./assets/sedglo.png" alt="Salon">
+            <img src="./assets/sedglo.png" alt="Sedglo Hair and Beauty salon website with WhatsApp booking">
           </div>
-          <div class="proj-name">Salon<br>One-Page Website</div>
+          <h3 class="proj-name">Salon<br>One-Page Website</h3>
           <p class="proj-desc lit-text">Salon services menu with instant WhatsApp booking — mobile-friendly, fast-loading, and designed to convert visitors into clients.</p>
           <div class="proj-stack">
             <span class="pill">HTML</span><span class="pill">CSS</span>
@@ -636,13 +695,13 @@
         </a>
 
         <!-- 003 — Local Chips & Kota Store -->
-        <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="proj-card" target="_blank" rel="noopener">
+        <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Local Chips and Kota Store project">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">003</div>
           <div class="proj-img">
-            <img src="./assets/mimi.png" alt="Local Chips & Kota Store">
+            <img src="./assets/mimi.png" alt="Mimi's Local Chips and Kota Store online ordering menu">
           </div>
-          <div class="proj-name">Local Chips &amp;<br>Kota Store</div>
+          <h3 class="proj-name">Local Chips &amp;<br>Kota Store</h3>
           <p class="proj-desc lit-text">Simple online menu where customers order food directly
             through WhatsApp — perfect for small restaurants and
             kota shops.
@@ -654,13 +713,13 @@
         </a>
 
         <!-- 004 — La Voga -->
-        <a href="https://la-voga-east-restaurant.vercel.app/" class="proj-card" target="_blank" rel="noopener">
+        <a href="https://la-voga-east-restaurant.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View La Voga Brand Website project">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">004</div>
           <div class="proj-img">
-            <img src="./assets/la voga.png" alt="La Voga">
+            <img src="./assets/la voga.png" alt="La Voga East Restaurant brand website">
           </div>
-          <div class="proj-name">La Voga<br>Brand Website</div>
+          <h3 class="proj-name">La Voga<br>Brand Website</h3>
           <p class="proj-desc lit-text">Elegant brand presence website built to showcase style, attract customers, and establish a strong digital identity for a fashion-forward label.</p>
           <div class="proj-stack">
             <span class="pill">HTML</span><span class="pill">CSS</span>
@@ -669,13 +728,13 @@
         </a>
 
         <!-- 005 — Gadget Empire -->
-        <a href="https://gadget-empire.vercel.app/" class="proj-card" target="_blank" rel="noopener">
+        <a href="https://gadget-empire.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Gadget Empire E-Commerce Store project">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">005</div>
           <div class="proj-img">
-            <img src="./assets/Gadget Empire.png" alt="Gadget Empire">
+            <img src="./assets/Gadget Empire.png" alt="Gadget Empire e-commerce store for tech products">
           </div>
-          <div class="proj-name">Gadget Empire<br>E-Commerce Store</div>
+          <h3 class="proj-name">Gadget Empire<br>E-Commerce Store</h3>
           <p class="proj-desc lit-text">Modern gadget store built for browsing and buying tech products online — clean UI, product listings, and a smooth shopping experience.</p>
           <div class="proj-stack">
             <span class="pill">HTML</span><span class="pill">CSS</span>
@@ -686,7 +745,7 @@
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section" id="skills" aria-label="Skills">
       <div class="sec-head">
         <div>
           <div class="sec-label">02 — Capabilities</div>
@@ -729,7 +788,7 @@
       </div>
     </section>
 
-    <section class="section" id="experience">
+    <section class="section" id="experience" aria-label="Experience">
       <div class="sec-head">
         <div>
           <div class="sec-label">03 — History</div>
@@ -752,7 +811,7 @@
         <div class="exp-item">
           <div class="exp-meta">
             <div class="exp-period">Apr 2024 –<br>Feb 2025</div>
-            <div class="exp-co"><a href="https://engagenet.ai" target="_blank" rel="noopener">engagenet.ai ↗</a></div>
+            <div class="exp-co"><a href="https://engagenet.ai" target="_blank" rel="noopener noreferrer">engagenet.ai ↗</a></div>
           </div>
           <div>
             <div class="exp-role">Software Engineer</div>
@@ -763,7 +822,7 @@
         <div class="exp-item">
           <div class="exp-meta">
             <div class="exp-period">Oct 2023 –<br>Apr 2024</div>
-            <div class="exp-co"><a href="https://mosebonet.co.za" target="_blank" rel="noopener">mosebonet.co.za ↗</a></div>
+            <div class="exp-co"><a href="https://mosebonet.co.za" target="_blank" rel="noopener noreferrer">mosebonet.co.za ↗</a></div>
           </div>
           <div>
             <div class="exp-role">Web Developer</div>
@@ -777,7 +836,7 @@
   </div>
 
   <!-- CONTACT SECTION -->
-  <div class="contact-section section" id="contact">
+  <div class="contact-section section" id="contact" aria-label="Contact">
     <div class="contact-inner">
       <div class="contact-left">
         <h2 class="contact-intro">Let's build<br>something <em>real.</em></h2>
@@ -786,26 +845,26 @@
         </p>
         <div class="contact-details">
           <div class="contact-detail-row">
-            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-detail-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
             <div class="contact-detail-text"><a href="mailto:brightchester5@gmail.com">brightchester5@gmail.com</a></div>
           </div>
           <div class="contact-detail-row">
-            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
             <div class="contact-detail-text">Gauteng, South Africa</div>
           </div>
           <div class="contact-detail-row">
-            <div class="contact-detail-icon"><i class="fas fa-clock"></i></div>
+            <div class="contact-detail-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
             <div class="contact-detail-text">Open to full-time &amp; freelance</div>
           </div>
         </div>
       </div>
 
       <div class="contact-right">
-        <form class="contact-form" id="contactForm" novalidate>
+        <form class="contact-form" id="contactForm" novalidate aria-label="Contact form">
 
-          <div class="inquiry-badge" id="inquiryBadge">
+          <div class="inquiry-badge" id="inquiryBadge" aria-live="polite">
             <span id="inquiryBadgeText"></span>
-            <span class="inquiry-badge-x" id="inquiryBadgeX" title="Clear">✕</span>
+            <span class="inquiry-badge-x" id="inquiryBadgeX" title="Clear" role="button" aria-label="Clear selected inquiry">✕</span>
           </div>
 
           <div class="form-group">
@@ -819,24 +878,24 @@
                 <option value="Branding">Branding</option>
                 <option value="Full-time position">Full-time position</option>
               </select>
-              <span class="select-arrow">▾</span>
+              <span class="select-arrow" aria-hidden="true">▾</span>
             </div>
           </div>
 
           <div class="form-name-row">
             <div class="form-group">
               <label class="form-label" for="fname">First name *</label>
-              <input class="form-input" type="text" id="fname" name="first_name" placeholder="Your first name" required>
+              <input class="form-input" type="text" id="fname" name="first_name" placeholder="Your first name" required autocomplete="given-name">
             </div>
             <div class="form-group">
               <label class="form-label" for="lname">Last name</label>
-              <input class="form-input" type="text" id="lname" name="last_name" placeholder="Your last name">
+              <input class="form-input" type="text" id="lname" name="last_name" placeholder="Your last name" autocomplete="family-name">
             </div>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="email">Email *</label>
-            <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+            <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required autocomplete="email">
           </div>
 
           <div class="form-group">
@@ -849,15 +908,15 @@
               maxlength="1000"
               required
             ></textarea>
-            <div class="form-char-count" id="charCount">0 / 1000</div>
+            <div class="form-char-count" id="charCount" aria-live="polite">0 / 1000</div>
           </div>
 
-          <div class="form-status" id="formStatus"></div>
+          <div class="form-status" id="formStatus" role="alert" aria-live="assertive"></div>
 
           <div class="form-submit-row">
             <button type="submit" class="btn-send" id="submitBtn">
               Send message
-              <span class="btn-send-icon">↗</span>
+              <span class="btn-send-icon" aria-hidden="true">↗</span>
             </button>
             <span class="form-note">Replies within 24 hrs</span>
           </div>
@@ -875,24 +934,24 @@
       <a href="mailto:brightchester5@gmail.com" class="foot-email">brightchester5@gmail.com</a>
     </div>
     <div class="foot-right">
-      <a href="mailto:brightchester5@gmail.com" class="soc" title="Email"><i class="fas fa-envelope"></i></a>
-      <a href="https://yourdreamsacademy.vercel.app/" class="soc" title="LMS Project" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a href="mailto:brightchester5@gmail.com" class="soc" title="Email Nkosi Bright" aria-label="Send email to Nkosi Bright"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <a href="https://yourdreamsacademy.vercel.app/" class="soc" title="LMS Project" aria-label="View Learning Management System project" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
         </svg>
       </a>
-      <a href="https://sedglo-hair-beauty.vercel.app/" class="soc" title="Salon Project" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a href="https://sedglo-hair-beauty.vercel.app/" class="soc" title="Salon Project" aria-label="View Salon website project" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
       </a>
-      <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="soc" title="Kota Store Project" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="soc" title="Kota Store Project" aria-label="View Kota Store project" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
         </svg>
       </a>
-      <a href="https://gadget-empire.vercel.app/" class="soc" title="Gadget Empire" target="_blank" rel="noopener">
-        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <a href="https://gadget-empire.vercel.app/" class="soc" title="Gadget Empire" aria-label="View Gadget Empire e-commerce project" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
         </svg>
       </a>
