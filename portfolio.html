@@ -46,7 +46,7 @@
       "addressRegion": "Gauteng",
       "addressCountry": "ZA"
     },
-    "knowsAbout": ["Vue.js", "Python", "Django", "PostgreSQL", "JavaScript", "HTML", "CSS", "REST APIs", "UI/UX Design"],
+    "knowsAbout": ["Java", "Spring Boot", "Vue.js", "Python", "Django", "PostgreSQL", "JavaScript", "HTML", "CSS", "REST APIs", "AWS", "UI/UX Design"],
     "sameAs": [
       "https://www.fiverr.com/nkosi_bright"
     ],
@@ -516,7 +516,7 @@
     .foot-mid { text-align: center; }
     .foot-email { font-family: var(--mono); font-size: 0.72rem; color: var(--dim); text-decoration: none; letter-spacing: 0.08em; border-bottom: 1px solid var(--ghost); padding-bottom: 2px; transition: color 0.2s, border-color 0.2s; }
     .foot-email:hover { color: var(--accent); border-color: var(--accent); }
-    .foot-right { display: flex; justify-content: flex-end; gap: 8px; }
+    .foot-right { display: flex; justify-content: flex-end; gap: 8px; flex-wrap: wrap; }
     .soc { width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 2px; color: var(--muted); text-decoration: none; font-size: 0.75rem; transition: border-color 0.2s, color 0.2s; }
     .soc:hover { border-color: var(--accent); color: var(--accent); }
     .foot-copy { grid-column: 1/-1; text-align: center; font-family: var(--mono); font-size: 0.58rem; color: var(--ghost); letter-spacing: 0.12em; padding-top: 24px; border-top: 1px solid var(--border); }
@@ -617,7 +617,7 @@
           <span class="name-last">Bright</span>
         </div>
         <div class="name-rule"></div>
-        <p class="hero-role">Software Engineer | Java | Python | Vue</p>
+        <p class="hero-role">Software Engineer | Java · Spring Boot · Vue</p>
         <p class="hero-bio lit-text" id="heroBio">
           I build web applications that convert users, scale efficiently, and deliver real business value with clean user experiences and strong backend systems.
         </p>
@@ -658,14 +658,32 @@
           <div class="sec-label">01 — Work</div>
           <h2 class="sec-title">Projects</h2>
         </div>
-        <div class="sec-count">5 projects</div>
+        <div class="sec-count">6 projects</div>
       </div>
       <div class="proj-grid">
 
-        <!-- 001 — LMS -->
-        <a href="https://yourdreamsacademy.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Learning Management System project">
+        <!-- 001 — Nyukzin Wallet -->
+        <a href="http://nyukzin-wallet-frontend.s3-website.af-south-1.amazonaws.com/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Nyukzin Wallet System project">
           <span class="proj-arrow">↗</span>
           <div class="proj-num">001</div>
+          <div class="proj-img">
+            <img src="./assets/nyukzin.png" alt="Nyukzin digital wallet system built with Java, Spring Boot and Vue.js">
+          </div>
+          <h3 class="proj-name">Nyukzin<br>Wallet System</h3>
+          <p class="proj-desc lit-text">
+            Full-stack digital wallet system with secure user authentication, transaction management, and real-time balance tracking — deployed on AWS infrastructure.
+          </p>
+          <div class="proj-stack">
+            <span class="pill">Java</span><span class="pill">Spring Boot</span>
+            <span class="pill">Vue.js</span><span class="pill">AWS</span>
+            <span class="pill">JWT</span><span class="pill">REST API</span>
+          </div>
+        </a>
+
+        <!-- 002 — LMS -->
+        <a href="https://yourdreamsacademy.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Learning Management System project">
+          <span class="proj-arrow">↗</span>
+          <div class="proj-num">002</div>
           <div class="proj-img">
             <img src="./assets/LMS_1.png" alt="Learning Management System built with Vue.js and Django REST">
           </div>
@@ -679,10 +697,10 @@
           </div>
         </a>
 
-        <!-- 002 — Salon -->
+        <!-- 003 — Salon -->
         <a href="https://sedglo-hair-beauty.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Salon One-Page Website project">
           <span class="proj-arrow">↗</span>
-          <div class="proj-num">002</div>
+          <div class="proj-num">003</div>
           <div class="proj-img">
             <img src="./assets/sedglo.png" alt="Sedglo Hair and Beauty salon website with WhatsApp booking">
           </div>
@@ -693,23 +711,6 @@
           <div class="proj-stack">
             <span class="pill">HTML</span><span class="pill">CSS</span>
             <span class="pill">Bootstrap</span><span class="pill">jQuery</span><span class="pill">UX</span>
-          </div>
-        </a>
-
-        <!-- 003 — Local Chips & Kota Store -->
-        <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Local Chips and Kota Store project">
-          <span class="proj-arrow">↗</span>
-          <div class="proj-num">003</div>
-          <div class="proj-img">
-            <img src="./assets/mimi.png" alt="Mimi's Local Chips and Kota Store online ordering menu">
-          </div>
-          <h3 class="proj-name">Local Chips &amp;<br>Kota Store</h3>
-          <p class="proj-desc lit-text">
-          Online ordering system where customers browse a menu and place food orders instantly via WhatsApp.
-          </p>
-          <div class="proj-stack">
-            <span class="pill">HTML</span><span class="pill">CSS</span>
-            <span class="pill">JavaScript</span><span class="pill">jQuery</span><span class="pill">WhatsApp API</span>
           </div>
         </a>
 
@@ -730,27 +731,10 @@
           </div>
         </a>
 
-        <!-- 005 — Gadget Empire -->
-        <a href="https://gadget-empire.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Gadget Empire E-Commerce Store project">
-          <span class="proj-arrow">↗</span>
-          <div class="proj-num">005</div>
-          <div class="proj-img">
-            <img src="./assets/Gadget Empire.png" alt="Gadget Empire e-commerce store for tech products">
-          </div>
-          <h3 class="proj-name">Gadget Empire<br>E-Commerce Store</h3>
-          <p class="proj-desc lit-text">
-          Gadget store built for browsing tech products with a clean UI and smooth shopping experience.
-          </p>
-          <div class="proj-stack">
-            <span class="pill">HTML</span><span class="pill">CSS</span>
-            <span class="pill">JavaScript</span><span class="pill">UX</span>
-          </div>
-        </a>
-
-        <!-- 006 — Babukisi Foundation -->
+        <!-- 005 — Babukisi Foundation -->
         <a href="https://babukisi-foundation.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Babukisi Foundation Swati Culture project">
           <span class="proj-arrow">↗</span>
-          <div class="proj-num">006</div>
+          <div class="proj-num">005</div>
           <div class="proj-img">
             <img src="./assets/Babukisi Foundation.png" alt="Babukisi Foundation Swati culture website showcasing traditions and community initiatives">
           </div>
@@ -763,6 +747,23 @@
             <span class="pill">CSS</span>
             <span class="pill">JavaScript</span>
             <span class="pill">Responsive Design</span>
+          </div>
+        </a>
+
+        <!-- 006 — Gadget Empire -->
+        <a href="https://gadget-empire.vercel.app/" class="proj-card" target="_blank" rel="noopener noreferrer" aria-label="View Gadget Empire E-Commerce Store project">
+          <span class="proj-arrow">↗</span>
+          <div class="proj-num">006</div>
+          <div class="proj-img">
+            <img src="./assets/Gadget Empire.png" alt="Gadget Empire e-commerce store for tech products">
+          </div>
+          <h3 class="proj-name">Gadget Empire<br>E-Commerce Store</h3>
+          <p class="proj-desc lit-text">
+          Gadget store built for browsing tech products with a clean UI and smooth shopping experience.
+          </p>
+          <div class="proj-stack">
+            <span class="pill">HTML</span><span class="pill">CSS</span>
+            <span class="pill">JavaScript</span><span class="pill">UX</span>
           </div>
         </a>
 
@@ -791,7 +792,10 @@
           </div>
           <div class="skill-row">
             <div class="skill-cat">Backend</div>
-            <div class="skill-tags"><span class="sk">Python</span><span class="sk">Django REST Framework</span></div>
+            <div class="skill-tags">
+              <span class="sk">Java</span><span class="sk">Spring Boot</span>
+              <span class="sk">Python</span><span class="sk">Django REST Framework</span>
+            </div>
           </div>
           <div class="skill-row">
             <div class="skill-cat">Databases</div>
@@ -799,7 +803,13 @@
           </div>
           <div class="skill-row">
             <div class="skill-cat">Tooling</div>
-            <div class="skill-tags"><span class="sk">Git</span><span class="sk">GitHub</span><span class="sk">REST APIs</span></div>
+            <div class="skill-tags"><span class="sk">Git</span><span class="sk">GitHub</span><span class="sk">REST APIs</span><span class="sk">JWT</span></div>
+          </div>
+          <div class="skill-row">
+            <div class="skill-cat">Deployment</div>
+            <div class="skill-tags">
+              <span class="sk">AWS</span><span class="sk">Vercel</span><span class="sk">PythonAnywhere</span>
+            </div>
           </div>
           <div class="skill-row">
             <div class="skill-cat">Design</div>
@@ -958,22 +968,39 @@
       <a href="mailto:brightchester5@gmail.com" class="foot-email">brightchester5@gmail.com</a>
     </div>
     <div class="foot-right">
+      <!-- Email -->
       <a href="mailto:brightchester5@gmail.com" class="soc" title="Email Nkosi Bright" aria-label="Send email to Nkosi Bright"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+      <!-- 001 — Nyukzin Wallet -->
+      <a href="http://nyukzin-wallet-frontend.s3-website.af-south-1.amazonaws.com/" class="soc" title="Nyukzin Wallet System" aria-label="View Nyukzin Wallet System project" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="2" y="5" width="20" height="14" rx="2"/><path d="M16 10h.01"/><path d="M2 10h20"/>
+        </svg>
+      </a>
+      <!-- 002 — LMS -->
       <a href="https://yourdreamsacademy.vercel.app/" class="soc" title="LMS Project" aria-label="View Learning Management System project" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
         </svg>
       </a>
+      <!-- 003 — Salon -->
       <a href="https://sedglo-hair-beauty.vercel.app/" class="soc" title="Salon Project" aria-label="View Salon website project" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
         </svg>
       </a>
-      <a href="https://mimi-s-local-chips-kotas.vercel.app/" class="soc" title="Kota Store Project" aria-label="View Kota Store project" target="_blank" rel="noopener noreferrer">
+      <!-- 004 — La Voga -->
+      <a href="https://la-voga-east-restaurant.vercel.app/" class="soc" title="La Voga Brand Website" aria-label="View La Voga brand website project" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          <path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/>
         </svg>
       </a>
+      <!-- 005 — Babukisi Foundation -->
+      <a href="https://babukisi-foundation.vercel.app/" class="soc" title="Babukisi Foundation" aria-label="View Babukisi Foundation project" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </a>
+      <!-- 006 — Gadget Empire -->
       <a href="https://gadget-empire.vercel.app/" class="soc" title="Gadget Empire" aria-label="View Gadget Empire e-commerce project" target="_blank" rel="noopener noreferrer">
         <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/>
